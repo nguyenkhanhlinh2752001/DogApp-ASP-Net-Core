@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using DogApp.Models;
 
 namespace DogApp.Interfaces
@@ -15,5 +11,6 @@ namespace DogApp.Interfaces
         bool Create(Owner owner);
         bool Update(Owner owner);
         bool Delete(Owner owner);
+        
     }
 }

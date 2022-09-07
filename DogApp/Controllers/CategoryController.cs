@@ -48,9 +48,6 @@ namespace CategoryApp.Controllers
             return Ok(_icategory.Delete(deleteObj));
         }
 
-        [HttpGet("dog/{dogId}")]
-        public IActionResult GetCategoryNameByDogId(int dogId){
-            return Ok(_icategory.GetCategoryNameByDogId(dogId));
-        }
+        
     }
 }

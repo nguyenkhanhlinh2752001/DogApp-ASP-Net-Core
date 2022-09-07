@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using DogApp.Database;
 using DogApp.Interfaces;
 using DogApp.Models;
@@ -43,10 +39,7 @@ namespace DogApp.Repository
             return _context.Categories.FirstOrDefault(c => c.Id == id);
         }
 
-        public string GetCategoryNameByDogId(int dogId)
-        {
-            return _context.Dogs.Where(d => d.Id == dogId).Select(d => d.Category.Name).FirstOrDefault();
-        }
+        
 
         public bool Save()
         {

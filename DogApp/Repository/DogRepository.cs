@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using DogApp.Database;
 using DogApp.Interfaces;
 using DogApp.Models;
@@ -51,6 +47,14 @@ namespace DogApp.Repository
         public ICollection<Dog> GetDogsByOwner(int ownerId)
         {
             return _context.Dogs.Where(d => d.OwnerId == ownerId).ToList();
+        }
+        public string GetOwnerNameByDogId(int id)
+        {
+            return _context.Dogs.Where(x => x.Id == id).Select(x => x.Owner.Name).FirstOrDefault();
+        }
+        public string GetCategoryNameByDogId(int dogId)
+        {
+            return _context.Dogs.Where(d => d.Id == dogId).Select(d => d.Category.Name).FirstOrDefault();
         }
 
         public bool Save()

@@ -15,6 +15,6 @@ namespace DogApp.Interfaces
         bool Create(Category category);
         bool Update(Category category);
         bool Delete(Category category);
-        string GetCategoryNameByDogId(int id);
+        
     }
 }

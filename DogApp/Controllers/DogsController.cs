@@ -60,5 +60,15 @@ namespace DogApp.Controllers
             return Ok(_idog.GetDogsByOwner(id));
         }
 
+        [HttpGet("{dogId}/owner")]
+        public IActionResult GetOwnerNameByDogId(int dogId){
+            return Ok(_idog.GetOwnerNameByDogId(dogId));
+        }
+
+        [HttpGet("{dogId}/category")]
+        public IActionResult GetCategoryNameByDogId(int dogId){
+            return Ok(_idog.GetCategoryNameByDogId(dogId));
+        }
+
     }
 }

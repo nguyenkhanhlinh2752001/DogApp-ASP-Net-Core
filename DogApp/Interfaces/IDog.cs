@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using DogApp.Models;
 
 namespace DogApp.Interfaces
@@ -18,5 +14,7 @@ namespace DogApp.Interfaces
 
         ICollection<Dog> GetDogsByCategory(int categoryId);
         ICollection<Dog> GetDogsByOwner(int ownerId);
+        string GetOwnerNameByDogId(int id);
+        string GetCategoryNameByDogId(int id);
     }
 }

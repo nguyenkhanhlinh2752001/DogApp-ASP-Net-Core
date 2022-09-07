@@ -39,6 +39,8 @@ namespace DogApp.Repository
             return _context.Owners.FirstOrDefault(x => x.Id == id);
         }
 
+        
+
         public bool Save()
         {
             return _context.SaveChanges() > 0 ? true : false;
